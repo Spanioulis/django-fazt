@@ -8,6 +8,6 @@ class Person(models.Model):
     gender = models.CharField(max_length=100)
 
 class Tasks(models.Model):
-    title = models.CharField(max_legnth=200)
-    description = models.TextField
+    title = models.CharField(max_length=200)
+    description = models.TextField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
