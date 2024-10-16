@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tasks</title>
-	</head>
+{% extends 'layouts/menu.html' %} {% block content %}
 
-	<body>
-		<!-- Comentario HTML que se puede ver en el Inspector -->
-		{% comment %} Comentario {% endcomment %} {# TODO: esto es una tarea #}
-		<h1>Tasks</h1>
-		{% for task in tasks %}
-		<article
-			style="
-				border: 1px solid black;
-				padding: 10px;
-				border-radius: 5px;
-				width: 400px;
-				margin-bottom: 20px;
-			"
-		>
-			<h2>{% if task.done == False %} 🕝 {% else %} ✅ {% endif %} {{task.title}}</h2>
+<!-- Comentario HTML que se puede ver en el Inspector -->
+{% comment %} Comentario {% endcomment %} {# TODO: esto es una tarea #}
+<h1>Tasks</h1>
+{% for task in tasks %}
+<article
+	style="
+		border: 1px solid black;
+		padding: 10px;
+		border-radius: 5px;
+		width: 400px;
+		margin-bottom: 20px;
+	"
+>
+	<h2>{% if task.done == False %} 🕝 {% else %} ✅ {% endif %} {{task.title}}</h2>
 
-			<p>{{task.description}}</p>
-			<p>{{task.person.name}}</p>
+	<p>{{task.description}}</p>
+	<p>{{task.person.name}}</p>
 
-			<div>
-				<button>❌ Delete</button>
-				<button>✅ Done</button>
-			</div>
-		</article>
-		{% endfor %}
-	</body>
-</html>
+	<div>
+		<button>❌ Delete</button>
+		<button>✅ Done</button>
+	</div>
+</article>
+{% endfor %} {% endblock %}

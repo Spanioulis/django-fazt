@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layouts/menu.html' %} {% block content %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Django Fazt</title>
-</head>
+<main>
+	<h1>{{ title }}</h1>
+	<p>
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam enim nesciunt fugit corrupti
+		delectus odio facere sapiente recusandae animi, quo repellendus, maiores aliquam cumque eius
+		illo voluptatum est error magnam.
+	</p>
+</main>
 
-<body>
-  <h1>{{ title }}</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam enim nesciunt fugit corrupti delectus odio facere
-    sapiente recusandae animi, quo repellendus, maiores aliquam cumque eius illo voluptatum est error magnam.</p>
-</body>
-
-</html>
+{% endblock %}

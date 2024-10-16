@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tasks</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<ul
+					style="
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						list-style: none;
+					"
+				>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/about">About</a>
+					</li>
+					<li>
+						<a href="/persons">Persons</a>
+					</li>
+					<li>
+						<a href="/tasks">Tasks</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		{% block content %} {% endblock %}
+
+		<footer>
+			<p>Copyright 2022</p>
+		</footer>
+	</body>
+</html>
