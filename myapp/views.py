@@ -23,9 +23,9 @@ def persons(request):
   # persons = list(Person.objects.values())
   # return JsonResponse(persons, safe=False)
   persons = Person.objects.all( )
+
   return render(request, 'persons.html', {
-    "persons": persons
-    
+    "persons": persons,
   })
 
 def tasks(request):
@@ -33,5 +33,5 @@ def tasks(request):
   # return HttpResponse('task: %s' % task.title)
   tasks = Task.objects.all()
   return render(request, 'tasks.html', {
-    'tasks': tasks
+    'tasks': tasks,
   })

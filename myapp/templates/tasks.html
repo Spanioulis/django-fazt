@@ -7,13 +7,28 @@
 	</head>
 
 	<body>
+		<!-- Comentario HTML que se puede ver en el Inspector -->
+		{% comment %} Comentario {% endcomment %} {# TODO: esto es una tarea #}
 		<h1>Tasks</h1>
-
 		{% for task in tasks %}
-		<article>
-			<h2>{{task.title}}</h2>
+		<article
+			style="
+				border: 1px solid black;
+				padding: 10px;
+				border-radius: 5px;
+				width: 400px;
+				margin-bottom: 20px;
+			"
+		>
+			<h2>{% if task.done == False %} 🕝 {% else %} ✅ {% endif %} {{task.title}}</h2>
+
 			<p>{{task.description}}</p>
 			<p>{{task.person.name}}</p>
+
+			<div>
+				<button>❌ Delete</button>
+				<button>✅ Done</button>
+			</div>
 		</article>
 		{% endfor %}
 	</body>
