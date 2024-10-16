@@ -1,0 +1,12 @@
+{% extends 'layouts/menu.html' %} {% block content %}
+
+<main>
+	<h1>Create Tasks</h1>
+
+	<form method="POST">
+		{% csrf_token %} {{form.as_p}}
+		<button>Crear</button>
+	</form>
+</main>
+
+{% endblock %}
