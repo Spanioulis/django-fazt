@@ -1,4 +1,8 @@
-{% extends 'layouts/menu.html' %} {% block content %}
+{% extends 'layouts/menu.html' %}
+
+{% load static %}
+
+{% block content %}
 
 <main>
 	<h1>{{ title }}</h1>
@@ -7,6 +11,8 @@
 		delectus odio facere sapiente recusandae animi, quo repellendus, maiores aliquam cumque eius
 		illo voluptatum est error magnam.
 	</p>
+
+	<img src="{% static 'images/background-hero.webp' %}" alt="background-hero" />
 </main>
 
 {% endblock %}
